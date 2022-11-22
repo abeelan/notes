@@ -3,6 +3,7 @@
 
 
 使用`JavaScript`操作页面：
+
 - 解决点击不生效的问题
 - 页面滚动
 - 修改元素属性
@@ -11,7 +12,7 @@
 
 ### JavaScript
 
-```JavaScript
+```javascript
 // 进入浏览器 -> 检查 -> console
 // 获取网页名称
 document.title
@@ -40,13 +41,16 @@ header = driver.find_element(By.CSS_SELECTOR, "h1")
 # arguments: 参数传递
 text = driver.execute_script('return arguments[0].innerText', header)
 assert text == "Selenium automates browsers. That's it!"
+
+# 示例：通过 js 打开一个新窗口
+driver.execute_script('window.open("https://www.baidu.com");')
 ```
 
 
 
 #####  定位元素
 
-```Python
+```python
 js = 'return document.getElementById("su")'
 driver.execute_script(js)
 ```
@@ -62,7 +66,7 @@ driver.execute_script(js)
 - 滑动至具体位置
 - 滑动至目标元素可见
 
-```Python
+```python
 # 模拟鼠标滚轮，滑动页面至底部
 js = "window.scrollTo(0, document.body.scrollHeight)" 
 driver.execute_script(js)
@@ -89,7 +93,7 @@ driver.execute_script("arguments[0].scrollIntoView(false);", element)
 
 ##### 示例：操作控件 & 获取返回值
 
-```Python
+```python
 # 场景：百度搜索结果页，滑动到页面底部，点击下一页
 
 """
@@ -134,7 +138,7 @@ print(self.driver.execute_script(js_code))
 
 ##### 示例：修改控件属性
 
-```Python
+```python
 """
 时间控件属性为 readonly
 手动测试时：手动去选择对应的时间
