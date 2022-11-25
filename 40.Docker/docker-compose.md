@@ -48,6 +48,10 @@ $ docker-compose config
 
 # 后台启动
 $ docker-compose up -d
+# 指定名称
+$ docker-compose -p "selenium-grid" up -d
+# 指定配置文件启动
+$ docker-compose -f docker-compose.yml up -d
 
 # 构建镜像；仅构建，不启动容器
 $ docker-compose build
@@ -67,6 +71,9 @@ $ docker-compose stop
 $ docker-compose restart
 $ docker-compose pause
 $ docker-compose unpause
+
+# 停止并删除已创建的容器网络及容器
+$ docker-compose down
 ```
 
 

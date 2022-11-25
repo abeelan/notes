@@ -63,7 +63,7 @@ Appium 界面版本，打包了 Appium 服务器运行需要的所有东西。�
 
 客户端发送请求到服务端，服务端将请求转为可执行指令发送到设备，执行操作后返回结果。
 
-<img src="https://secure2.wostatic.cn/static/rnioczxzYK4oun1UmCa1ws/image.png?auth_key=1668346066-sX9ayRa3erCqXv4By5JEmL-0-a1fe5050fd01fc095474bce389721cbf" alt="img" style="zoom:50%;" />
+![a11](https://ceshiren.com/uploads/default/optimized/3X/1/8/18242fb7b4b42358e0aed66d3646f4c3c8afec4f_2_800x492.png)
 
 **以 Android 端为例**
 
@@ -110,10 +110,9 @@ $ appium
 $ pip install Appium-Python-Client
 ```
 
-demo
+验证环境是否正常。
 
 ```Python
-# 验证环境是否正常
 from appium import webdriver
 
 desired_caps = {
@@ -127,22 +126,4 @@ desired_caps = {
 driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_caps)
 driver.quit()
 ```
-
-
-
-### dom 结构
-
-- dom：`Document Object Model`，文档对象模型
-- dom 应用：用于表示界面的控件层级，界面的结构化描述。常见的格式为 `html\xml`。核心元素为节点和属性。
-
-
-
-Andoid 应用的层级结构和 `html` 不一样，是一个定制的 `xml`。`App source` 类似于 dom，表示界面所有控件的结构。每个控件都有它的属性，但没有 css 属性。
-
-
-
-IOS 与 Android 的 dom 结构类似，但是属性有所区别，例：
-
-- Android resourceid = iOS name
-- Android content-des = IOS accessibility-id
 
