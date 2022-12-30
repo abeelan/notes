@@ -73,3 +73,18 @@ $ ideviceinstaller -l
 $ appium-doctor --ios
 ```
 
+
+
+### start 可能出现的问题
+
+多设备未配置 udid
+
+![image-20221204212059341](https://cdn.jsdelivr.net/gh/abeelan/image-hosting-service/img/image-20221204212059341.png)
+
+提示应用不被认可
+
+![image-20221204212157603](https://cdn.jsdelivr.net/gh/abeelan/image-hosting-service/img/image-20221204212157603.png)
+
+不能启动 wda
+
+![image-20221204212233719](https://cdn.jsdelivr.net/gh/abeelan/image-hosting-service/img/image-20221204212233719.png)
